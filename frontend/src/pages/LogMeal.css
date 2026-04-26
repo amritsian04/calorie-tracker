@@ -1,0 +1,219 @@
+.log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.log-header h1 { font-size: 22px; }
+
+/* Meta card */
+
+.log-meta-card { margin-bottom: 16px; }
+
+.log-meta-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.log-meta-hint {
+  font-size: 13px;
+  color: #6b8c6b;
+  margin-top: 4px;
+}
+
+/* Add card */
+
+.log-add-card { margin-bottom: 16px; }
+
+.log-section-title {
+  font-size: 15px;
+  color: #1a2e1a;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Food search */
+
+.search-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1.5px solid #c8d8c8;
+  border-radius: 8px;
+  list-style: none;
+  z-index: 200;
+  max-height: 260px;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  margin-top: 4px;
+}
+
+.search-item {
+  padding: 10px 14px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 1px solid #f1f5f1;
+}
+
+.search-item:last-child { border-bottom: none; }
+
+.search-item:hover { background: #f1f5f1; }
+
+.search-food-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1a2e1a;
+}
+
+.search-food-meta {
+  font-size: 12px;
+  color: #6b8c6b;
+}
+
+.search-hint {
+  font-size: 12px;
+  color: #9cae9c;
+  margin-top: 6px;
+}
+
+/* Selected food preview */
+
+.food-preview {
+  background: #f1f9f1;
+  border: 1.5px solid #c8e6c9;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.food-preview-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a4d1a;
+  margin-bottom: 6px;
+}
+
+.food-preview-macros {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: #3a6b3a;
+}
+
+.preview-serving { color: #6b8c6b; }
+
+/* Quantity row */
+
+.quantity-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.add-btn {
+  flex-shrink: 0;
+  height: 40px;
+  padding: 0 20px;
+}
+
+/* Success message */
+
+.success-msg {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+/* Category browser */
+
+.category-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.chip {
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1.5px solid #c8d8c8;
+  background: #fff;
+  font-size: 13px;
+  color: #4a5e4a;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.chip:hover { background: #e8f5e9; border-color: #a8cca8; }
+
+.chip-active {
+  background: #2e7d32;
+  color: #fff;
+  border-color: #2e7d32;
+}
+
+.category-results {
+  list-style: none;
+  border: 1.5px solid #c8d8c8;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Logged entries */
+
+.logged-card { margin-top: 8px; }
+
+.total-cal-badge {
+  font-size: 13px;
+  font-weight: 400;
+  color: #6b8c6b;
+  background: #e8f5e9;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.entries-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.entries-log-table th {
+  text-align: left;
+  color: #6b8c6b;
+  font-weight: 500;
+  padding: 4px 8px 8px 0;
+  font-size: 12px;
+  border-bottom: 1px solid #e8f5e9;
+}
+
+.entries-log-table td {
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid #f1f5f1;
+  color: #2c3e2d;
+}
+
+.entries-log-table tr:last-child td { border-bottom: none; }
+
+.food-name-cell { font-weight: 500; }

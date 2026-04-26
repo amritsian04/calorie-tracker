@@ -1,0 +1,141 @@
+.goals-title {
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.goals-subtitle {
+  color: #6b8c6b;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.goals-card { margin-bottom: 16px; }
+
+.goals-date-group { max-width: 220px; }
+
+.goal-existing-banner {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.goal-empty-banner {
+  background: #fff8e1;
+  color: #8d6e00;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.label-required { color: #c62828; }
+
+.input-with-unit {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-unit {
+  font-size: 13px;
+  color: #6b8c6b;
+  white-space: nowrap;
+}
+
+.macros-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a2e1a;
+  margin-bottom: 14px;
+}
+
+.optional {
+  font-size: 12px;
+  font-weight: 400;
+  color: #9cae9c;
+}
+
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.macro-hint {
+  font-size: 12px;
+  color: #6b8c6b;
+  margin-bottom: 20px;
+}
+
+.macro-hint-warn { color: #c62828; }
+
+.goals-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.success-msg {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+
+/* Presets */
+
+.goals-reference { padding: 20px 22px; }
+
+.ref-title {
+  font-size: 14px;
+  color: #4a5e4a;
+  margin-bottom: 14px;
+}
+
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.preset-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f1f5f1;
+  border: 1.5px solid #c8d8c8;
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.preset-btn:hover { background: #e0ede0; border-color: #a8cca8; }
+
+.preset-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a2e1a;
+  margin-bottom: 2px;
+}
+
+.preset-cal {
+  font-size: 16px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.preset-macros {
+  font-size: 11px;
+  color: #6b8c6b;
+  margin-top: 4px;
+}

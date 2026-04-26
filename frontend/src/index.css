@@ -1,13 +1,176 @@
-body {
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  background: #f1f5f1;
+  color: #1a2e1a;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4 { font-weight: 600; line-height: 1.3; }
+
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+a { color: inherit; }
+
+/* ── Shared utility classes ──────────────────────────── */
+
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: #2e7d32;
+  color: #fff;
+}
+.btn-primary:hover { background: #245f27; }
+
+.btn-secondary {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.btn-secondary:hover { background: #d4edd5; }
+
+.btn-danger {
+  background: #ffebee;
+  color: #c62828;
+}
+.btn-danger:hover { background: #ffcdd2; }
+
+.btn-sm { padding: 5px 12px; font-size: 13px; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #4a5e4a;
+}
+
+.form-control {
+  padding: 9px 12px;
+  border: 1.5px solid #c8d8c8;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff;
+  color: #1a2e1a;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  width: 100%;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.12);
+}
+
+.error-msg {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.loading-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid #c8d8c8;
+  border-top-color: #2e7d32;
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Progress bar ────────────────────────────────────── */
+
+.progress-track {
+  background: #e8f5e9;
+  border-radius: 999px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #2e7d32;
+  transition: width 0.4s ease;
+}
+
+.progress-fill.over {
+  background: #e53935;
+}
+
+/* ── Macro pill grid ─────────────────────────────────── */
+
+.macro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.macro-pill {
+  background: #f1f5f1;
+  border-radius: 10px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.macro-pill .macro-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.macro-pill .macro-label {
+  font-size: 12px;
+  color: #6b8c6b;
+  margin-top: 2px;
 }
